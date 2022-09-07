@@ -37,7 +37,7 @@ function getUserInfo() {
       }
       //调用 renderAvatar() 函数渲染用户的头像
       renderAvatar(res.data)
-    },
+    }
     //无论成功还是失败，都会调用 complete 这个回调函数
     // complete: function(res) {
     //   //在 complete 回调函数中，可以使用res.responseJSON拿到服务器响应回来的数据
@@ -57,7 +57,7 @@ function renderAvatar(user) {
   //1、获取用户的名称
   let name = user.nickname || user.username
   //2、设置欢迎的文本
-  $('.welcome').html(`欢迎&nbsp;nbsp;${name}`)
+  $('#welcome').html('欢迎&nbsp;nbsp;' + name)
   //3、按需渲染用户的头像
   if(user.user_pic !== null) {
     //3.1渲染图片头像
